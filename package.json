@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "casperjs": "git://github.com/n1k0/casperjs.git#master",
+    "gulp": "^3.8.11",
+    "gulp-shell": "^0.4.1",
+    "phantomjs2": "^2.0.0",
+    "run-sequence": "^1.1.0"
+  },
+  "scripts": {
+    "e2e-test": "gulp e2e-test",
+    "casperjs": "casperjs test e2e/"
+  }
+}
