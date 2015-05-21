@@ -1,3 +1,8 @@
 test:
   override:
+    - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    - tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+    - sudo rm /usr/local/bin/phantomjs
+    - sudo mv phantomjs /usr/local/bin/
+    - npm install -D gulp gulp-shell run-sequence n1k0/casperjs.git#master
     - npm run e2e-test
