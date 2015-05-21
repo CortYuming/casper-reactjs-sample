@@ -10,7 +10,7 @@ dependencies:
 test:
   pre:
     - phantomjs --version
-  override:
     - cd /home/ubuntu/casper-reactjs-sample/ui/tests/
+  override:
     - pwd
     - npm run e2e-test
