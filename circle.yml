@@ -5,6 +5,8 @@ machine:
     - sudo rm /usr/local/bin/phantomjs
     - sudo mv phantomjs /usr/local/bin/
 dependencies:
+  cache_directories:
+    - /home/ubuntu/casper-reactjs-sample/ui/tests/node_modules
   pre:
     - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm uninstall -D phantomjs2
 test:
