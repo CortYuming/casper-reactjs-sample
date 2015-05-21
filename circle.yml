@@ -7,10 +7,10 @@ machine:
 dependencies:
   pre:
     - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm uninstall -D phantomjs2
+    -
 test:
   pre:
     - phantomjs --version
-    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/
   override:
-    - pwd
+    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && pwd
     - npm run e2e-test
