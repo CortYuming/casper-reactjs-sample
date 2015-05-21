@@ -6,9 +6,9 @@ machine:
     - sudo mv phantomjs /usr/local/bin/
 dependencies:
   pre:
-    - npm uninstall -D phantomjs2
+    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm uninstall -D phantomjs2
 test:
   pre:
     - phantomjs --version
   override:
-    - npm run e2e-test
+    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && cd npm run e2e-test
