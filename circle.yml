@@ -1,4 +1,6 @@
 machine:
+  environment:
+    PACKAGE_JSON_PATH: "/home/ubuntu/casper-reactjs-sample/ui/tests/"
   pre:
     - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
     - tar -xjf phantomjs-2.0.0-ubuntu-12.04.tar.bz2
@@ -6,11 +8,11 @@ machine:
     - sudo mv phantomjs /usr/local/bin/
 dependencies:
   pre:
-    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm uninstall -D phantomjs2
+    - cd ${PACKAGE_JSON_PATH} && npm uninstall -D phantomjs2
   override:
-    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm install
+    - cd ${PACKAGE_JSON_PATH} && npm install
 test:
   pre:
     - phantomjs --version
   override:
-    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm run e2e-test
+    - cd ${PACKAGE_JSON_PATH} && npm run e2e-test
