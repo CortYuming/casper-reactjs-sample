@@ -11,4 +11,4 @@ test:
   pre:
     - phantomjs --version
   override:
-    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && cd npm run e2e-test
+    - cd /home/ubuntu/casper-reactjs-sample/ui/tests/ && npm run e2e-test
