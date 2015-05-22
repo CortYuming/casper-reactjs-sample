@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 //     'npm install'
 // ]));
 gulp.task('casperjs', shell.task([
-    'node_modules/.bin/casperjs test e2e/'
+    'node_modules/.bin/casperjs test tests/e2e/'
 ]));
 gulp.task('e2e-test', function(callback) {
     runSequence(
