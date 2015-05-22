@@ -16,4 +16,6 @@ test:
     - phantomjs --version
   override:
     # - cd ${PACKAGE_JSON_PATH} && npm run e2e-test
-    - make js_test
+    - make js_test:
+        environment:
+          PATH: ${PACKAGE_JSON_PATH}
