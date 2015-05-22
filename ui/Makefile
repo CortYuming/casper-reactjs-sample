@@ -1,2 +1,2 @@
 test:
-	npm run e2e-test
+	node_modules/.bin/gulp e2e-test
