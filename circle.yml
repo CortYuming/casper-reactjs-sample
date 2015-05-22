@@ -16,6 +16,4 @@ test:
     - phantomjs --version
   override:
     # - cd ${PACKAGE_JSON_PATH} && npm run e2e-test
-    - make js_test:
-        environment:
-          PATH: "/home/ubuntu/casper-reactjs-sample/ui/"
+    - make js_test
